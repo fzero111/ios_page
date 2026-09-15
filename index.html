@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>OxyLinkPro 隐私政策 / Privacy Policy</title>
+  <meta name="description" content="OxyLinkPro 隐私政策。本应用不注册账号、不上传数据；蓝牙与设备运行信息仅在本机处理。">
+  <style>
+    :root {
+      --bg: #f4f8fb;
+      --paper: #ffffff;
+      --ink: #1c2a33;
+      --muted: #5a6b76;
+      --line: #d7e3ec;
+      --teal: #1a8a8a;
+      --teal-dark: #146f6f;
+      --teal-soft: #e6f4f4;
+      --sky: #dbeaf4;
+      --warn-bg: #fff7e8;
+      --warn-ink: #7a5410;
+      --placeholder-bg: #fff1f4;
+      --placeholder-ink: #b4234a;
+      --radius: 16px;
+      --shadow: 0 12px 40px rgba(28, 42, 51, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 420px at 10% -10%, #d7eef0 0%, transparent 55%),
+        radial-gradient(900px 380px at 100% 0%, #e8f1f8 0%, transparent 50%),
+        var(--bg);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .wrap {
+      width: min(880px, calc(100% - 32px));
+      margin: 32px auto 64px;
+    }
+
+    header.hero {
+      background: linear-gradient(180deg, #e8f4f8 0%, #ffffff 100%);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 36px 36px 28px;
+      margin-bottom: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #2aa3a3, #146f6f);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo p {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .lang {
+      display: inline-flex;
+      padding: 4px;
+      background: var(--teal-soft);
+      border-radius: 999px;
+    }
+
+    .lang button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--teal-dark);
+      font: inherit;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .lang button[aria-pressed="true"] {
+      background: #fff;
+      color: var(--ink);
+      box-shadow: 0 1px 4px rgba(20, 111, 111, 0.16);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .callout {
+      margin-top: 22px;
+      background: var(--teal-soft);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 12px 12px 0;
+      padding: 14px 16px;
+      color: #134b4b;
+    }
+
+    main {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 8px 36px 40px;
+    }
+
+    nav.toc {
+      margin: 24px 0 8px;
+      padding: 18px 20px;
+      background: #f7fbfd;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    nav.toc h2 {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+    }
+
+    nav.toc ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    nav.toc a {
+      color: var(--teal-dark);
+      text-decoration: none;
+    }
+
+    nav.toc a:hover { text-decoration: underline; }
+
+    section h2 {
+      margin: 36px 0 12px;
+      padding-top: 8px;
+      font-size: 1.2rem;
+      scroll-margin-top: 16px;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      font-size: 1.02rem;
+    }
+
+    p, li { color: #24343d; }
+    ul { padding-left: 1.2em; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 8px;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--sky);
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) td { background: #fafcfd; }
+
+    .note {
+      background: var(--warn-bg);
+      color: var(--warn-ink);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .ph {
+      background: var(--placeholder-bg);
+      color: var(--placeholder-ink);
+      padding: 0 0.28em;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    .hidden { display: none; }
+
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 16px, 880px); margin: 12px auto 40px; }
+      header.hero, main { padding-left: 18px; padding-right: 18px; }
+      table { display: block; overflow-x: auto; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .lang, footer { display: none; }
+      header.hero, main { box-shadow: none; border: 0; }
+      .hidden-print { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="brand">
+        <div class="logo">
+          <div class="mark" aria-hidden="true">O2</div>
+          <div>
+            <h1>OxyLinkPro</h1>
+            <p data-i18n="subtitle">隐私政策 / Privacy Policy</p>
+          </div>
+        </div>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" id="btn-zh" aria-pressed="true">中文</button>
+          <button type="button" id="btn-en" aria-pressed="false">English</button>
+        </div>
+      </div>
+      <div class="meta">
+        <span>Bundle ID: com.oxylinkerpro.app</span>
+        <span data-i18n="effective">生效日期：2026年9月15日</span>
+        <span>iOS</span>
+      </div>
+      <div class="callout" data-i18n="summary">
+        本应用不注册账号、不接入互联网服务、不把任何数据上传到我们的服务器或第三方。设备相关信息仅在您的 iPhone 内存中处理，用于完成蓝牙连接与界面展示；关闭应用或断开连接后即不再保留。
+      </div>
+    </header>
+
+    <main>
+      <article id="zh" lang="zh-Hans">
+        <nav class="toc">
+          <h2>目录</h2>
+          <ol>
+            <li><a href="#zh-1">我们处理哪些信息</a></li>
+            <li><a href="#zh-2">我们如何使用信息</a></li>
+            <li><a href="#zh-3">信息共享、转让与公开披露</a></li>
+            <li><a href="#zh-4">数据存储与跨境传输</a></li>
+            <li><a href="#zh-5">您的权利</a></li>
+            <li><a href="#zh-6">未成年人保护</a></li>
+            <li><a href="#zh-7">健康与医疗说明</a></li>
+            <li><a href="#zh-8">政策更新</a></li>
+            <li><a href="#zh-9">联系我们</a></li>
+          </ol>
+        </nav>
+
+        <p>OxyLinkPro（以下简称「本应用」）是一款用于扫描、连接附近蓝牙（BLE）制氧相关设备，并在手机上查看设备状态与运行数据的工具类应用。我们重视您的隐私。本政策说明本应用会如何处理信息。</p>
+        <p>运营主体：<span class="ph">Jetlee</span></p>
+
+        <section id="zh-1">
+          <h2>1. 我们处理哪些信息</h2>
+          <h3>1.1 不会收集的信息</h3>
+          <p>本应用<strong>不会</strong>收集、存储或上传以下信息：</p>
+          <ul>
+            <li>姓名、手机号、邮箱、账号、密码等个人身份信息</li>
+            <li>精确或大致位置</li>
+            <li>通讯录、相册、相机、麦克风</li>
+            <li>健康档案、医疗记录、血氧等人体生理数据（本应用展示的是<strong>设备输出的运行参数</strong>，不是您身体的健康指标）</li>
+            <li>广告标识符（IDFA）或其他用于广告追踪的信息</li>
+            <li>支付信息、浏览记录、分析/崩溃统计数据</li>
+          </ul>
+          <p>本应用<strong>没有</strong>用户注册、登录、云同步、推送、统计分析或广告 SDK。</p>
+
+          <h3>1.2 仅在本机处理的信息</h3>
+          <p>为提供扫描、连接和查看数据的功能，本应用会在<strong>您的设备本地</strong>、通过系统蓝牙接口处理以下信息。这些信息<strong>不会离开您的手机</strong>（不会上传至我们或任何第三方）：</p>
+          <table>
+            <thead>
+              <tr><th>类型</th><th>内容</th><th>用途</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>蓝牙权限与附近设备信息</td>
+                <td>附近 BLE 设备的名称、信号强度（RSSI）、系统分配的外设标识、广播中的序列号（如有）</td>
+                <td>扫描并列出可连接设备，供您选择连接</td>
+              </tr>
+              <tr>
+                <td>设备标识信息</td>
+                <td>设备序列号（SN）、固件版本、连接地址类信息</td>
+                <td>完成握手后，在设备页展示当前设备</td>
+              </tr>
+              <tr>
+                <td>授权码</td>
+                <td>您根据仪器提示输入的验证码</td>
+                <td>仅用于与设备完成本地鉴权/握手，不保存</td>
+              </tr>
+              <tr>
+                <td>设备运行数据</td>
+                <td>氧浓度、流量、机器状态、定时时间、单次运行时间、累计运行时间</td>
+                <td>仅用于在界面实时展示</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>上述信息均驻留在应用运行时的内存中，<strong>不会写入相册、文件、钥匙串，也不会使用 UserDefaults 等持久化存储进行保存。</strong>断开连接或退出应用后，上述信息即被清除。</p>
+          <p>本应用声明使用了蓝牙后台模式（bluetooth-central），以便在系统允许的范围内维持与已连接设备的通信。我们不会在后台收集额外信息，也不会进行定位。</p>
+        </section>
+
+        <section id="zh-2">
+          <h2>2. 我们如何使用信息</h2>
+          <p>仅用于：</p>
+          <ol>
+            <li>扫描附近 BLE 设备并展示列表；</li>
+            <li>连接您选择的设备，完成验证码鉴权与协议握手；</li>
+            <li>在本机界面展示设备版本、序列号及实时运行数据；</li>
+            <li>处理连接失败、超时、断开等状态提示。</li>
+          </ol>
+          <p>我们不会将上述信息用于广告、画像、营销，也不会出售或共享给第三方。</p>
+        </section>
+
+        <section id="zh-3">
+          <h2>3. 信息共享、转让与公开披露</h2>
+          <p>我们<strong>不会</strong>与任何第三方共享、转让或公开披露您的信息。本应用不包含第三方统计、推送、广告、社交或支付 SDK。</p>
+          <p>系统蓝牙由 Apple 的 Core Bluetooth 框架提供。设备发现与连接遵循 iOS 系统权限与隐私控制；您可在 iPhone「设置 → 隐私与安全性 → 蓝牙」中随时关闭对本应用的授权。</p>
+        </section>
+
+        <section id="zh-4">
+          <h2>4. 数据存储与跨境传输</h2>
+          <ul>
+            <li><strong>存储地点：</strong>仅在您的 iPhone 本地内存中临时处理，我们不运营用于存储用户数据的服务器。</li>
+            <li><strong>存储期限：</strong>不进行持久化保存；断开设备或退出应用后即不再保留。</li>
+            <li><strong>跨境传输：</strong>因不上传数据，不涉及将个人信息传输至境外。</li>
+          </ul>
+        </section>
+
+        <section id="zh-5">
+          <h2>5. 您的权利</h2>
+          <p>您可以：</p>
+          <ul>
+            <li>在系统设置中关闭蓝牙权限（关闭后将无法扫描和连接设备，核心功能不可用）；</li>
+            <li>在应用内点击「断开连接」，停止与当前设备的通信；</li>
+            <li>卸载本应用。因我们不保存您的数据，卸载后无需另行申请删除云端数据。</li>
+          </ul>
+          <p>如对本政策有疑问，请通过文末联系方式与我们联系。</p>
+        </section>
+
+        <section id="zh-6">
+          <h2>6. 未成年人保护</h2>
+          <p>本应用面向成年人使用制氧相关设备时的辅助查看，<strong>不面向 13 周岁以下（在中国大陆为 14 周岁以下）的儿童。</strong>我们不主动收集未成年人的个人信息。如您是监护人并认为未成年人向本应用提供了信息，请与我们联系。</p>
+        </section>
+
+        <section id="zh-7">
+          <h2>7. 健康与医疗说明</h2>
+          <p class="note">本应用用于查看所连接设备的<strong>运行状态参数</strong>（例如设备输出的氧浓度、流量、开关机状态和运行时长），<strong>不是医疗器械，不提供诊断、治疗或监护建议。</strong>展示数据来自所连接设备，仅供参考，不能替代专业医护人员的意见。身体不适请及时就医。</p>
+        </section>
+
+        <section id="zh-8">
+          <h2>8. 政策更新</h2>
+          <p>我们可能适时修订本政策。更新后会在本页面公布新的生效日期。若变更导致处理方式发生实质性变化，我们将通过应用内提示或更新说明告知。继续使用本应用即表示您了解更新后的政策。</p>
+        </section>
+
+        <section id="zh-9">
+          <h2>9. 联系我们</h2>
+          <ul>
+            <li>运营主体：<span class="ph">Jetlee</span></li>
+            <li>电子邮箱：<span class="ph">52521438@qq.com</span></li>
+            <li>应用名称：OxyLinkPro</li>
+            <li>Bundle ID：com.oxylinkerpro.app</li>
+          </ul>
+          <p>我们将在收到请求后合理期限内予以答复。</p>
+        </section>
+      </article>
+
+      <article id="en" class="hidden" lang="en">
+        <nav class="toc">
+          <h2>Contents</h2>
+          <ol>
+            <li><a href="#en-1">Information We Process</a></li>
+            <li><a href="#en-2">How We Use Information</a></li>
+            <li><a href="#en-3">Sharing</a></li>
+            <li><a href="#en-4">Storage and International Transfer</a></li>
+            <li><a href="#en-5">Your Choices</a></li>
+            <li><a href="#en-6">Children</a></li>
+            <li><a href="#en-7">Health Disclaimer</a></li>
+            <li><a href="#en-8">Changes</a></li>
+            <li><a href="#en-9">Contact</a></li>
+          </ol>
+        </nav>
+
+        <p>OxyLinkPro (“the App”) lets you scan and connect to nearby Bluetooth Low Energy (BLE) oxygen-related devices and view device status and live operating data on your iPhone. This Policy describes how information is handled.</p>
+        <p>Operator: <span class="ph">[Legal Entity Name]</span></p>
+
+        <section id="en-1">
+          <h2>1. Information We Process</h2>
+          <h3>1.1 Information We Do Not Collect</h3>
+          <p>The App does <strong>not</strong> collect, store, or upload:</p>
+          <ul>
+            <li>Name, phone number, email, account credentials, or other identity information</li>
+            <li>Precise or coarse location</li>
+            <li>Contacts, photos, camera, or microphone</li>
+            <li>Health records or physiological measurements from your body (the App shows <strong>device operating parameters</strong>, not your personal health metrics)</li>
+            <li>Advertising identifiers (IDFA) or data used for tracking</li>
+            <li>Payment information, browsing history, analytics, or crash reports</li>
+          </ul>
+          <p>The App has no registration, sign-in, cloud sync, push notifications, analytics, or advertising SDKs.</p>
+
+          <h3>1.2 Information Processed Only on Your Device</h3>
+          <p>To scan, connect, and display data, the App processes the following <strong>locally</strong> via the system Bluetooth APIs. This information <strong>does not leave your iPhone</strong>:</p>
+          <table>
+            <thead>
+              <tr><th>Type</th><th>Examples</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nearby Bluetooth devices</td>
+                <td>Device name, RSSI, system peripheral identifier, serial number from advertisement (if present)</td>
+                <td>List devices so you can choose one to connect</td>
+              </tr>
+              <tr>
+                <td>Device identifiers</td>
+                <td>Serial number (SN), firmware version, connection address-type information</td>
+                <td>Show the current device after handshake</td>
+              </tr>
+              <tr>
+                <td>Auth code</td>
+                <td>The verification code you enter as shown on the instrument</td>
+                <td>One-time local authentication with the device; not saved</td>
+              </tr>
+              <tr>
+                <td>Device operating data</td>
+                <td>Oxygen concentration, flow rate, machine status, timer, session time, accumulated time</td>
+                <td>Live on-screen display only</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>This information is held in memory only. It is <strong>not</strong> written to Photos, files, Keychain, or UserDefaults. It is cleared when you disconnect or quit the App.</p>
+          <p>The App may use Bluetooth in the background (bluetooth-central) so communication with an already-connected device can continue as allowed by iOS. We do not collect extra information in the background and we do not use location services.</p>
+        </section>
+
+        <section id="en-2">
+          <h2>2. How We Use Information</h2>
+          <p>Solely to:</p>
+          <ol>
+            <li>Scan for nearby BLE devices and show the list;</li>
+            <li>Connect to the device you select and complete auth-code handshake;</li>
+            <li>Display version, serial number, and live operating data on your phone;</li>
+            <li>Show connection errors, timeouts, and disconnect status.</li>
+          </ol>
+          <p>We do not use this information for advertising, profiling, or marketing, and we do not sell or share it.</p>
+        </section>
+
+        <section id="en-3">
+          <h2>3. Sharing</h2>
+          <p>We do <strong>not</strong> share, transfer, or publicly disclose your information. The App includes no third-party analytics, ads, social, or payment SDKs.</p>
+          <p>Bluetooth is provided by Apple’s Core Bluetooth framework. You can revoke Bluetooth access at any time in iPhone <strong>Settings → Privacy &amp; Security → Bluetooth</strong>.</p>
+        </section>
+
+        <section id="en-4">
+          <h2>4. Storage and International Transfer</h2>
+          <ul>
+            <li><strong>Where:</strong> Processed only in memory on your iPhone. We do not operate servers that store user data.</li>
+            <li><strong>How long:</strong> Not persisted; discarded on disconnect or when the App is closed.</li>
+            <li><strong>Cross-border transfer:</strong> Not applicable, because no data is uploaded.</li>
+          </ul>
+        </section>
+
+        <section id="en-5">
+          <h2>5. Your Choices</h2>
+          <p>You may:</p>
+          <ul>
+            <li>Turn off Bluetooth permission in iOS Settings (scanning and connecting will stop working);</li>
+            <li>Tap <strong>Disconnect</strong> in the App to end the current session;</li>
+            <li>Uninstall the App. Because we do not store your data, there is no cloud copy to delete.</li>
+          </ul>
+          <p>Contact us using the details below if you have questions.</p>
+        </section>
+
+        <section id="en-6">
+          <h2>6. Children</h2>
+          <p>The App is intended for adults using related equipment. It is <strong>not directed to children under 13</strong> (under 14 in mainland China). We do not knowingly collect personal information from children. Guardians who believe a child has provided information may contact us.</p>
+        </section>
+
+        <section id="en-7">
+          <h2>7. Health Disclaimer</h2>
+          <p class="note">The App displays <strong>device operating parameters</strong> (such as output oxygen concentration, flow, on/off status, and run time). <strong>It is not a medical device and does not provide diagnosis, treatment, or monitoring advice.</strong> Values come from the connected hardware and are for reference only. They do not replace professional medical advice. Seek medical care if you feel unwell.</p>
+        </section>
+
+        <section id="en-8">
+          <h2>8. Changes</h2>
+          <p>We may update this Policy and will post the new effective date on this page. If changes are material, we will provide notice in the App or release notes.</p>
+        </section>
+
+        <section id="en-9">
+          <h2>9. Contact</h2>
+          <ul>
+            <li>Operator: <span class="ph">[Legal Entity Name]</span></li>
+            <li>Email: <span class="ph">[Contact Email]</span></li>
+            <li>App: OxyLinkPro</li>
+            <li>Bundle ID: com.oxylinkerpro.app</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      © 2026 OxyLinkPro. This page is provided for App Store privacy disclosure.
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var zh = document.getElementById("zh");
+      var en = document.getElementById("en");
+      var btnZh = document.getElementById("btn-zh");
+      var btnEn = document.getElementById("btn-en");
+      var html = document.documentElement;
+      var effective = document.querySelector('[data-i18n="effective"]');
+      var summary = document.querySelector('[data-i18n="summary"]');
+
+      function setLang(lang) {
+        var isEn = lang === "en";
+        zh.classList.toggle("hidden", isEn);
+        en.classList.toggle("hidden", !isEn);
+        btnZh.setAttribute("aria-pressed", String(!isEn));
+        btnEn.setAttribute("aria-pressed", String(isEn));
+        html.lang = isEn ? "en" : "zh-Hans";
+        effective.textContent = isEn
+          ? "Effective date: September 15, 2026"
+          : "生效日期：2026年9月15日";
+        summary.textContent = isEn
+          ? "The App does not require an account, does not connect to our servers, and does not upload any data to us or to third parties. Device-related information is processed only in memory on your iPhone to complete the Bluetooth connection and on-screen display. It is not kept after you disconnect or close the App."
+          : "本应用不注册账号、不接入互联网服务、不把任何数据上传到我们的服务器或第三方。设备相关信息仅在您的 iPhone 内存中处理，用于完成蓝牙连接与界面展示；关闭应用或断开连接后即不再保留。";
+        try { localStorage.setItem("oxylinkpro-privacy-lang", lang); } catch (e) {}
+        history.replaceState(null, "", "#" + lang);
+      }
+
+      btnZh.addEventListener("click", function () { setLang("zh"); });
+      btnEn.addEventListener("click", function () { setLang("en"); });
+
+      var initial = (location.hash === "#en" || location.hash === "#en-1") ? "en" : "zh";
+      try {
+        if (location.hash.indexOf("en") === 1) initial = "en";
+        else if (location.hash.indexOf("zh") === 1) initial = "zh";
+        else initial = localStorage.getItem("oxylinkpro-privacy-lang") || initial;
+      } catch (e) {}
+      setLang(initial);
+    })();
+  </script>
+</body>
+</html>
